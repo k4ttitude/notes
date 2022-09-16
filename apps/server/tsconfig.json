@@ -2,8 +2,6 @@
   "extends": "@tsconfig/node16-strictest-esm/tsconfig.json",
   "include": ["src/**/*"],
   "compilerOptions": {
-    "module": "EsNext",
     "outDir": "dist",
-    "allowJs": true
   }
 }

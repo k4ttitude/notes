@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@notes/web",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -8,6 +8,9 @@
     "build": "vite build",
     "preview": "vite preview",
     "check": "svelte-check --tsconfig ./tsconfig.json"
+  },
+  "dependencies": {
+    "@notes/server": "workspace:server"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.2",

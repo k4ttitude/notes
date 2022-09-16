@@ -1,8 +1,9 @@
 {
-  "name": "server",
+  "name": "@notes/server",
+  "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "src/main.ts",
+  "main": "src/index.ts",
   "scripts": {
     "build": "tsc -p tsconfig.json",
     "pre:build": "rm -rf dist/",

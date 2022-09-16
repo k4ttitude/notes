@@ -21,5 +21,3 @@ server.listen({ port: 8080 }, (err, address) => {
   }
   console.log(`Server listening at ${address}`);
 });
-
-console.log('hoho')
