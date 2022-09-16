@@ -1,13 +1,16 @@
 <script lang="ts">
 	import '../app.css';
 	import newNoteIcon from '$lib/assets/icons/pencil-square.svg?src';
+	import deleteIcon from '$lib/assets/icons/trash.svg?src';
+	import IconButton from '../lib/components/IconButton.svelte';
 </script>
 
 <div class="flex items-center py-4 bg-zinc-700">
-	<div class="text-white">
-		{@html newNoteIcon}
+	<div class="flex-1" />
+	<div class="text-white flex">
+		<IconButton svg={newNoteIcon} />
+		<IconButton svg={deleteIcon} />
 	</div>
-	<div />
 </div>
 
 <main>
