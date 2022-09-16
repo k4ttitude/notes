@@ -16,8 +16,10 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@fastify/cors": "^8.1.0",
     "@trpc/server": "^9.27.2",
     "fastify": "^4.6.0",
+    "superjson": "^1.10.0",
     "zod": "^3.19.1"
   },
   "devDependencies": {

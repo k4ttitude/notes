@@ -1,5 +1,6 @@
 import * as trpc from "@trpc/server";
 import z from "zod";
+// import superjson from "superjson";
 
 export const appRouter = trpc
   .router()
@@ -8,11 +9,14 @@ export const appRouter = trpc
       return "Hello World!";
     },
   })
-  .query("todo.get", {
+  .query("todos.list", {
     input: z.object({ ids: z.array(z.string()).optional() }),
-    resolve() {
-      return [];
+    output: z.array(z.object({ id: z.string(), text: z.string() })),
+    resolve({ input }) {
+      console.log(input.ids)
+      return [{ id: "1", text: "Hello World!" }];
     },
-  });
+  })
+  // .transformer(superjson);
 
 export type AppRouter = typeof appRouter;
