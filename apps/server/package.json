@@ -2,9 +2,12 @@
   "name": "server",
   "version": "1.0.0",
   "description": "",
+  "main": "src/main.ts",
   "scripts": {
-    "build": "ts-node --esm src/main.ts",
-    "start": "pnpm build && node dist/main.js",
+    "build": "tsc -p tsconfig.json",
+    "pre:build": "rm -rf dist/",
+    "start": "pnpm build && node --experimental-specifier-resolution=node dist/main.js",
+    "dev": "nodemon",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,12 +15,14 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
+    "@trpc/server": "^9.27.2",
     "fastify": "^4.6.0",
-    "ts-node": "^10.9.1"
+    "zod": "^3.19.1"
   },
   "devDependencies": {
     "@tsconfig/node16-strictest-esm": "^1.0.3",
     "@types/node": "^18.7.18",
+    "nodemon": "^2.0.19",
     "typescript": "^4.8.3"
   }
 }
