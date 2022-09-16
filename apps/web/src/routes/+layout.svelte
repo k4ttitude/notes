@@ -1,13 +1,23 @@
 <script lang="ts">
 	import '../app.css';
+	import newNoteIcon from '$lib/assets/icons/pencil-square.svg?src';
 </script>
+
+<div class="flex items-center py-4 bg-zinc-700">
+	<div class="text-white">
+		{@html newNoteIcon}
+	</div>
+	<div />
+</div>
 
 <main>
 	<slot />
 </main>
 
 <footer>
-	<p class="text-red-500">visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit</p>
+	<p class="text-red-500">
+		visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
+	</p>
 </footer>
 
 <style>
