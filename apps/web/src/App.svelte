@@ -1,6 +1,7 @@
 <script lang="ts">
   import SideBar from "./lib/SideBar.svelte";
   import Header from "./lib/Header.svelte";
+  import Edit from "./lib/Edit.svelte";
 </script>
 
 <Header />
@@ -9,8 +10,8 @@
   <section class="left w-80 border-r border-gray-500">
     <SideBar />
   </section>
-  <section class="right flex-1">
-    <div />
+  <section class="right flex-1 flex">
+    <Edit />
   </section>
 </main>
 
