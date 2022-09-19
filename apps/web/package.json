@@ -26,6 +26,7 @@
   "dependencies": {
     "@notes/server": "workspace:server",
     "@trpc/client": "^9.27.2",
-    "@trpc/server": "^9.27.2"
+    "@trpc/server": "^9.27.2",
+    "superjson": "^1.10.0"
   }
 }

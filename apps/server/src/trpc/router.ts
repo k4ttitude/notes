@@ -1,9 +1,11 @@
+import { prisma } from "../db";
 import * as trpc from "@trpc/server";
 import z from "zod";
-// import superjson from "superjson";
+import superjson from "superjson";
 
 export const appRouter = trpc
   .router()
+  .transformer(superjson)
   .query("", {
     resolve() {
       return "Hello World!";
@@ -11,11 +13,10 @@ export const appRouter = trpc
   })
   .query("todos.list", {
     input: z.object({ ids: z.array(z.string()).optional() }),
-    output: z.array(z.object({ id: z.string(), text: z.string() })),
+    // output: z.array(z.object({ id: z.string(), text: z.string() })),
     resolve() {
-      return [{ id: "1", text: "Hello World!" }];
+      return prisma.note.findMany();
     },
   });
-// .transformer(superjson);
 
 export type AppRouter = typeof appRouter;

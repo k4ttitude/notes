@@ -4,15 +4,18 @@
   import Button from "./Button.svelte";
   import notesStore, { type Note } from "../store";
 
-  let note: Note;
+  let note: Note | undefined;
   notesStore.subscribe(({ notes, currentId }) => {
-    note = notes.find((_note) => _note.id === currentId)!;
+    note = notes.find((_note) => _note.id === currentId);
   });
 
   const newNote = () => {
     const newId = crypto.randomUUID();
     notesStore.update((prev) => ({
-      notes: [{ id: newId, text: "" }, ...prev.notes],
+      notes: [
+        { id: newId, text: "", createdAt: new Date(), updatedAt: new Date() },
+        ...prev.notes,
+      ],
       currentId: newId,
     }));
   };
@@ -20,7 +23,7 @@
 
 <header class="bg-zinc-700 h-10 px-2 flex gap-2 items-center">
   <div class="flex-1" />
-  <Button on:click={newNote} disabled={!note.text}>
+  <Button on:click={newNote} disabled={!note?.text}>
     <PencilIcon class="w-6 h-6" />
   </Button>
   <Button on:click={() => alert("haha")}>
