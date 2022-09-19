@@ -30,14 +30,21 @@ importers:
 
   apps/web:
     specifiers:
+      '@notes/server': workspace:server
       '@sveltejs/vite-plugin-svelte': ^1.0.2
+      '@trpc/client': ^9.27.2
+      '@trpc/server': ^9.27.2
       '@tsconfig/svelte': ^3.0.0
       svelte: ^3.49.0
       svelte-check: ^2.8.1
       svelte-preprocess: ^4.10.7
       tslib: ^2.4.0
-      typescript: ^4.6.4
+      typescript: ^4.8.3
       vite: ^3.1.0
+    dependencies:
+      '@notes/server': link:../server
+      '@trpc/client': 9.27.2_@trpc+server@9.27.2
+      '@trpc/server': 9.27.2
     devDependencies:
       '@sveltejs/vite-plugin-svelte': 1.0.5_svelte@3.50.1+vite@3.1.1
       '@tsconfig/svelte': 3.0.0

@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "@notes/web-csr",
   "private": true,
   "version": "0.0.0",
   "type": "module",
@@ -16,7 +16,12 @@
     "svelte-check": "^2.8.1",
     "svelte-preprocess": "^4.10.7",
     "tslib": "^2.4.0",
-    "typescript": "^4.6.4",
+    "typescript": "^4.8.3",
     "vite": "^3.1.0"
+  },
+  "dependencies": {
+    "@notes/server": "workspace:server",
+    "@trpc/client": "^9.27.2",
+    "@trpc/server": "^9.27.2"
   }
 }
