@@ -10,7 +10,9 @@
     "check": "svelte-check --tsconfig ./tsconfig.json"
   },
   "dependencies": {
-    "@notes/server": "workspace:server"
+    "@notes/server": "workspace:server",
+    "@trpc/client": "^9.27.2",
+    "@trpc/server": "^9.27.2"
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^1.0.2",
