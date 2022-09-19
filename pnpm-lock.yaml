@@ -31,6 +31,7 @@ importers:
   apps/web:
     specifiers:
       '@notes/server': workspace:server
+      '@poppanator/sveltekit-svg': ^1.0.0
       '@sveltejs/vite-plugin-svelte': ^1.0.2
       '@trpc/client': ^9.27.2
       '@trpc/server': ^9.27.2
@@ -49,6 +50,7 @@ importers:
       '@trpc/client': 9.27.2_@trpc+server@9.27.2
       '@trpc/server': 9.27.2
     devDependencies:
+      '@poppanator/sveltekit-svg': 1.0.0_svelte@3.50.1
       '@sveltejs/vite-plugin-svelte': 1.0.5_svelte@3.50.1+vite@3.1.1
       '@tsconfig/svelte': 3.0.0
       autoprefixer: 10.4.11_postcss@8.4.16

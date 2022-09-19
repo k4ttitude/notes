@@ -1,15 +1,14 @@
 <script lang="ts">
-  import svelteLogo from "./assets/svelte.svg";
-  import Counter from "./lib/Counter.svelte";
+  import Header from "./lib/Header.svelte";
 </script>
 
-<header class="bg-zinc-700 h-10" />
+<Header />
 
 <main class="flex flex-1 bg-white">
   <section class="left w-80 border-r border-gray-500">
     <div />
   </section>
-  <section class="right">
+  <section class="right flex-1">
     <div />
   </section>
 </main>
