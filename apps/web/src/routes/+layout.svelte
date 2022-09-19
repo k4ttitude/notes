@@ -1,55 +1,13 @@
 <script lang="ts">
 	import '../app.css';
-	import newNoteIcon from '$lib/assets/icons/pencil-square.svg?src';
-	import deleteIcon from '$lib/assets/icons/trash.svg?src';
-	import IconButton from '../lib/components/IconButton.svelte';
+	import Header from '../lib/components/Header.svelte';
 </script>
 
-<div class="flex items-center py-4 bg-zinc-700">
-	<div class="flex-1" />
-	<div class="text-white flex">
-		<IconButton svg={newNoteIcon} />
-		<IconButton svg={deleteIcon} />
-	</div>
-</div>
+<Header />
 
-<main>
+<main class="flex-1 flex">
 	<slot />
 </main>
 
-<footer>
-	<p class="text-red-500">
-		visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to learn SvelteKit
-	</p>
-</footer>
-
 <style>
-	main {
-		flex: 1;
-		display: flex;
-		flex-direction: column;
-		padding: 1rem;
-		width: 100%;
-		max-width: 1024px;
-		margin: 0 auto;
-		box-sizing: border-box;
-	}
-
-	footer {
-		display: flex;
-		flex-direction: column;
-		justify-content: center;
-		align-items: center;
-		padding: 40px;
-	}
-
-	footer a {
-		font-weight: bold;
-	}
-
-	@media (min-width: 480px) {
-		footer {
-			padding: 40px 0;
-		}
-	}
 </style>
