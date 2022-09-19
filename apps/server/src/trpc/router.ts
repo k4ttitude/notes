@@ -12,11 +12,10 @@ export const appRouter = trpc
   .query("todos.list", {
     input: z.object({ ids: z.array(z.string()).optional() }),
     output: z.array(z.object({ id: z.string(), text: z.string() })),
-    resolve({ input }) {
-      console.log(input.ids)
+    resolve() {
       return [{ id: "1", text: "Hello World!" }];
     },
-  })
-  // .transformer(superjson);
+  });
+// .transformer(superjson);
 
 export type AppRouter = typeof appRouter;

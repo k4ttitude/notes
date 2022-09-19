@@ -7,16 +7,14 @@ type ArrayElement<ArrayType extends readonly unknown[]> =
 export type Note = ArrayElement<InferQueryOutput<"todos.list">>;
 
 type NotesStore = {
-  notes: Record<string, Note>;
+  notes: Note[];
   currentId: string;
 };
 
-export const NEW_ID = "new";
-
 export default writable<NotesStore>({
-  notes: {
-    "1": { id: "1", text: "hello" },
-    "2": { id: "2", text: "world" },
-  },
+  notes: [
+    { id: "1", text: "hello" },
+    { id: "2", text: "world" },
+  ],
   currentId: "1",
 });
