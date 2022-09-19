@@ -1,4 +1,5 @@
 <script lang="ts">
+  import SideBar from "./lib/SideBar.svelte";
   import Header from "./lib/Header.svelte";
 </script>
 
@@ -6,7 +7,7 @@
 
 <main class="flex flex-1 bg-white">
   <section class="left w-80 border-r border-gray-500">
-    <div />
+    <SideBar />
   </section>
   <section class="right flex-1">
     <div />
