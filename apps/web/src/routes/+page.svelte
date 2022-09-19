@@ -1,5 +1,11 @@
 <script lang="ts">
 	import Counter from '$lib/Counter.svelte';
+	import * as trpc from '@trpc/client';
+	import type { AppRouter } from '@notes/server';
+
+	const client = trpc.createTRPCClient<AppRouter>({ url: 'http://localhost:8080/trpc' });
+
+	client.query('todos.list', {});
 </script>
 
 <svelte:head>

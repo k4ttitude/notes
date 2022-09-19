@@ -1,5 +1,5 @@
 {
-	"name": "web",
+	"name": "@notes/web",
 	"version": "0.0.1",
 	"scripts": {
 		"dev": "vite dev",
@@ -34,6 +34,9 @@
 	},
 	"type": "module",
 	"dependencies": {
-		"@fontsource/fira-mono": "^4.5.0"
+		"@fontsource/fira-mono": "^4.5.0",
+		"@notes/server": "workspace:server",
+		"@trpc/client": "^9.27.2",
+		"@trpc/server": "^9.27.2"
 	}
 }
